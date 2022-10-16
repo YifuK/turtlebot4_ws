@@ -1,0 +1,25 @@
+[0.531s] Invoking command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/proxemic_detector_pkg
+[0.657s] running develop
+[0.733s] running egg_info
+[0.733s] creating proxemic_detector_pkg.egg-info
+[0.733s] writing proxemic_detector_pkg.egg-info/PKG-INFO
+[0.733s] writing dependency_links to proxemic_detector_pkg.egg-info/dependency_links.txt
+[0.733s] writing entry points to proxemic_detector_pkg.egg-info/entry_points.txt
+[0.733s] writing requirements to proxemic_detector_pkg.egg-info/requires.txt
+[0.733s] writing top-level names to proxemic_detector_pkg.egg-info/top_level.txt
+[0.740s] writing manifest file 'proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.760s] reading manifest file 'proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.760s] writing manifest file 'proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.780s] running build_ext
+[0.780s] Creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/site.py
+[0.781s] Creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/proxemic-detector-pkg.egg-link (link to .)
+[0.781s] Installing turtlebot_proxemic_detector_node script to /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/proxemic_detector_pkg
+[0.781s] 
+[0.782s] Installed /home/student/turtlebot4_ws/build/proxemic_detector_pkg
+[0.782s] running install_data
+[0.782s] creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/ament_index
+[0.782s] creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/ament_index/resource_index
+[0.782s] creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/ament_index/resource_index/packages
+[0.782s] copying resource/proxemic_detector_pkg -> /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/ament_index/resource_index/packages
+[0.782s] copying package.xml -> /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/proxemic_detector_pkg
+[0.804s] Invoked command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/proxemic_detector_pkg

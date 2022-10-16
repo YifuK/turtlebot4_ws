@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+proxemic_detector_nodeproxemic_detector_pkg/__init__.py
+proxemic_detector_nodeproxemic_detector_pkg/turtlebot.py
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/PKG-INFO
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/SOURCES.txt
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/dependency_links.txt
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/entry_points.txt
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/requires.txt
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/top_level.txt
+proxemic_detector_nodeproxemic_detector_pkg.egg-info/zip-safe
+resource/proxemic_detector_nodeproxemic_detector_pkg

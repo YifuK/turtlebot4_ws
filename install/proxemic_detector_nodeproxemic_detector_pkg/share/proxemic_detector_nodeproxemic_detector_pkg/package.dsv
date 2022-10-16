@@ -1,0 +1,9 @@
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath.ps1
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath.dsv
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath.sh
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/ament_prefix_path.ps1
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/ament_prefix_path.dsv
+source;share/proxemic_detector_nodeproxemic_detector_pkg/hook/ament_prefix_path.sh
+source;../../build/proxemic_detector_nodeproxemic_detector_pkg/share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath_develop.ps1
+source;../../build/proxemic_detector_nodeproxemic_detector_pkg/share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath_develop.dsv
+source;../../build/proxemic_detector_nodeproxemic_detector_pkg/share/proxemic_detector_nodeproxemic_detector_pkg/hook/pythonpath_develop.sh

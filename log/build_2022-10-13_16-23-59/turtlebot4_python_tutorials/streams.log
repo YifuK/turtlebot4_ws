@@ -1,0 +1,18 @@
+[0.516s] Invoking command in '/home/student/turtlebot4_ws/build/turtlebot4_python_tutorials': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --editable --build-directory /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials
+[0.647s] running develop
+[0.723s] running egg_info
+[0.723s] writing turtlebot4_python_tutorials.egg-info/PKG-INFO
+[0.729s] writing dependency_links to turtlebot4_python_tutorials.egg-info/dependency_links.txt
+[0.730s] writing entry points to turtlebot4_python_tutorials.egg-info/entry_points.txt
+[0.730s] writing requirements to turtlebot4_python_tutorials.egg-info/requires.txt
+[0.730s] writing top-level names to turtlebot4_python_tutorials.egg-info/top_level.txt
+[0.750s] reading manifest file 'turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[0.751s] writing manifest file 'turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[0.771s] running build_ext
+[0.771s] Creating /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages/site.py
+[0.772s] Creating /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages/turtlebot4-python-tutorials.egg-link (link to .)
+[0.773s] Installing turtlebot4_first_python_node script to /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/turtlebot4_python_tutorials
+[0.773s] 
+[0.773s] Installed /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials
+[0.773s] running install_data
+[0.807s] Invoked command in '/home/student/turtlebot4_ws/build/turtlebot4_python_tutorials' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --editable --build-directory /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials

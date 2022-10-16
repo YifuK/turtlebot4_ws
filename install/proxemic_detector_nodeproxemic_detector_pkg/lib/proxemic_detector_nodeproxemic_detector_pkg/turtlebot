@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'proxemic-detector-nodeproxemic-detector-pkg','console_scripts','turtlebot'
+__requires__ = 'proxemic-detector-nodeproxemic-detector-pkg'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('proxemic-detector-nodeproxemic-detector-pkg', 'console_scripts', 'turtlebot')()
+    )

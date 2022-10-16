@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'turtlebot4-python-tutorials','console_scripts','turtlebot4_first_python_node'
+__requires__ = 'turtlebot4-python-tutorials'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('turtlebot4-python-tutorials', 'console_scripts', 'turtlebot4_first_python_node')()
+    )

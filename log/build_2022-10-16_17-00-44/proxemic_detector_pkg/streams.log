@@ -1,0 +1,18 @@
+[0.557s] Invoking command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/proxemic_detector_pkg
+[0.706s] running develop
+[0.794s] running egg_info
+[0.794s] writing proxemic_detector_pkg.egg-info/PKG-INFO
+[0.794s] writing dependency_links to proxemic_detector_pkg.egg-info/dependency_links.txt
+[0.794s] writing entry points to proxemic_detector_pkg.egg-info/entry_points.txt
+[0.794s] writing requirements to proxemic_detector_pkg.egg-info/requires.txt
+[0.794s] writing top-level names to proxemic_detector_pkg.egg-info/top_level.txt
+[0.833s] reading manifest file 'proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.834s] writing manifest file 'proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.873s] running build_ext
+[0.873s] Creating /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/proxemic-detector-pkg.egg-link (link to .)
+[0.874s] Installing turtlebot_proxemic_detector_node script to /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/proxemic_detector_pkg
+[0.874s] 
+[0.874s] Installed /home/student/turtlebot4_ws/build/proxemic_detector_pkg
+[0.874s] running install_data
+[0.874s] copying package.xml -> /home/student/turtlebot4_ws/install/proxemic_detector_pkg/share/proxemic_detector_pkg
+[0.905s] Invoked command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build --no-deps install_data --install-dir /home/student/turtlebot4_ws/install/proxemic_detector_pkg

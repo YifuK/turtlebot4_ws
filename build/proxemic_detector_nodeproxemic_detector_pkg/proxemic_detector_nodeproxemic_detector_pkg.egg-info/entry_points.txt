@@ -1,0 +1,3 @@
+[console_scripts]
+turtlebot = proxemic_detector_nodeproxemic_detector_pkg.turtlebot:main
+
