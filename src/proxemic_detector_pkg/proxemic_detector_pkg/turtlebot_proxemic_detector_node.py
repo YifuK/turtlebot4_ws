@@ -486,7 +486,7 @@ def main(args=None):
     proxemic_ranges = {'intimate_depth_threshold_min':10,
                         'intimate_depth_threshold_max':20,
                         'public_depth_threshold_min':50,
-                        'public_depth_threshold_max':300}
+                        'public_depth_threshold_max':60}
     selected_zone = 'public' # 'public' or 'intimate'
     robot_speed = 15 # meters per second
 
