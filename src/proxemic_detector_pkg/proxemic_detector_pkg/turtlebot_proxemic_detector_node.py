@@ -44,6 +44,7 @@ class ProxemicDetection(Node):
         self.rgb_bridge = CvBridge()
 
         # TASK 1: Subscribe to depth topic
+        # the self.rgb_callback will call the function in this class, so that the rgb image can be converted to OpenCV image for future use
         self.rgb_subscription = self.create_subscription(
             Image,
             '/color/preview/image',
@@ -55,6 +56,7 @@ class ProxemicDetection(Node):
         self.depth_bridge = CvBridge()
 
         # TASK 1: Subscribe to depth topic
+        # it's the same with the rgb subscription, the only difference is we are using depth call_back to know the depth of image
         self.depth_subscription = self.create_subscription(
             Image,
             '/stereo/depth',
@@ -122,25 +124,24 @@ class ProxemicDetection(Node):
         self.curr_state = ... # track current state
         self.next_state = ... # track next state
         '''
-        
-        self.get_logger().info(self.curr_state)
+        print(self.curr_state)
         if(self.curr_state == self.state1):
-            # Do something
-            # Condition to next stat
+            # initialized from start
             self.next_state = self.state2
         elif(self.curr_state == self.state2):
-            if not selected_bbox:
+            selected_bbox, distance_to_object = self.detection_object_distance()
+            # if the obj is not found, then rotate, else move to state3
+            if distance_to_object <= 0:
                 self.move_robot(0, 0.5, True)
             else:
                 self.next_state = self.state3
         elif(self.curr_state == self.state3):
-            # Do something
-            # Condition to next state
             
-            if self.close_object:
+            if self.proxemic_ranges['public_depth_threshold_min'] < distance_to_object <= self.proxemic_ranges['public_depth_threshold_max']:
+                print('moveeeee')
                 self.next_state = self.state4
             else:
-                self.move_robot(0.5, 0, True)
+                self.move_robot(3, 0, True)
         elif(self.curr_state == self.state4):
             # Do something
             # Condition to next state
@@ -348,10 +349,11 @@ class ProxemicDetection(Node):
         distance_to_object=0
         bbox_img_patch_mean = []
         temp_bboxes = []
+        # detecting all three colors
         for color in ['red', 'blue', 'green']:
             if color in self.bboxes.keys():
                 for bbox in self.bboxes[color]:
-                    img_patch = self.extract_image_patch(self.depth_image, bbox)
+                    img_patch = self.extract_image_patch(self.depth_image, bbox, (self.rgb_image.shape[0], self.rgb_image.shape[1]))
                     # if img_patch.any():
                     img_patch_mean = np.mean(img_patch)
                     bbox_img_patch_mean.append(img_patch_mean)
@@ -372,7 +374,8 @@ class ProxemicDetection(Node):
 
             
         if self.DISPLAY:
-            self.get_logger().info('Distance to object' + str(distance_to_object))
+            print(str(distance_to_object))
+            # self.get_logger().info('Distance to object' + str(distance_to_object))
 
         # Process image data to detect nearby objects; set distance_to_object
         # Compute to average depth pixel distance to nearby objects
@@ -483,10 +486,10 @@ def main(args=None):
     # User set parameters
     display=True
     color=None # Options include 'red', 'green', 'blue', or None for all colors
-    proxemic_ranges = {'intimate_depth_threshold_min':10,
-                        'intimate_depth_threshold_max':20,
-                        'public_depth_threshold_min':50,
-                        'public_depth_threshold_max':60}
+    proxemic_ranges = {'intimate_depth_threshold_min':0,
+                        'intimate_depth_threshold_max':100,
+                        'public_depth_threshold_min':100,
+                        'public_depth_threshold_max':500}
     selected_zone = 'public' # 'public' or 'intimate'
     robot_speed = 15 # meters per second
 

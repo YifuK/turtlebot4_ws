@@ -1,0 +1,24 @@
+[0.580s] Invoking command in '/home/student/turtlebot4_ws/build/turtlebot4_python_tutorials': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --uninstall --editable --build-directory /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build
+[0.761s] running develop
+[0.864s] Invoked command in '/home/student/turtlebot4_ws/build/turtlebot4_python_tutorials' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --uninstall --editable --build-directory /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build
+[0.865s] Invoking command in '/home/student/turtlebot4_ws/src/turtlebot4_python_tutorials': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot4_python_tutorials build --build-base /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build install --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --record /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/install.log --single-version-externally-managed
+[0.992s] running egg_info
+[0.992s] writing ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/PKG-INFO
+[0.993s] writing dependency_links to ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/dependency_links.txt
+[0.993s] writing entry points to ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/entry_points.txt
+[0.993s] writing requirements to ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/requires.txt
+[0.993s] writing top-level names to ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/top_level.txt
+[1.018s] reading manifest file '../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[1.018s] writing manifest file '../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info/SOURCES.txt'
+[1.018s] running build
+[1.018s] running build_py
+[1.018s] running install
+[1.019s] running install_lib
+[1.020s] running install_data
+[1.020s] running install_egg_info
+[1.021s] removing '/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages/turtlebot4_python_tutorials-0.0.0-py3.8.egg-info' (and everything under it)
+[1.021s] Copying ../../build/turtlebot4_python_tutorials/turtlebot4_python_tutorials.egg-info to /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages/turtlebot4_python_tutorials-0.0.0-py3.8.egg-info
+[1.022s] running install_scripts
+[1.035s] Installing turtlebot_proxemic_detector_node script to /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/turtlebot4_python_tutorials
+[1.036s] writing list of installed files to '/home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/install.log'
+[1.063s] Invoked command in '/home/student/turtlebot4_ws/src/turtlebot4_python_tutorials' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/turtlebot4_python_tutorials/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtlebot4_python_tutorials build --build-base /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/build install --prefix /home/student/turtlebot4_ws/install/turtlebot4_python_tutorials --record /home/student/turtlebot4_ws/build/turtlebot4_python_tutorials/install.log --single-version-externally-managed
