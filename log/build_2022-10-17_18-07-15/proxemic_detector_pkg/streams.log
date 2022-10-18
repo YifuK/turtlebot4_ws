@@ -1,0 +1,24 @@
+[0.571s] Invoking command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --uninstall --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build
+[0.722s] running develop
+[0.840s] Invoked command in '/home/student/turtlebot4_ws/build/proxemic_detector_pkg' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --uninstall --editable --build-directory /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build
+[0.841s] Invoking command in '/home/student/turtlebot4_ws/src/proxemic_detector_pkg': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/proxemic_detector_pkg build --build-base /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build install --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --record /home/student/turtlebot4_ws/build/proxemic_detector_pkg/install.log --single-version-externally-managed
+[0.969s] running egg_info
+[0.969s] writing ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/PKG-INFO
+[0.969s] writing dependency_links to ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/dependency_links.txt
+[0.969s] writing entry points to ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/entry_points.txt
+[0.969s] writing requirements to ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/requires.txt
+[0.969s] writing top-level names to ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/top_level.txt
+[0.991s] reading manifest file '../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.992s] writing manifest file '../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info/SOURCES.txt'
+[0.992s] running build
+[0.992s] running build_py
+[0.992s] running install
+[0.993s] running install_lib
+[0.993s] running install_data
+[0.994s] running install_egg_info
+[0.995s] removing '/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/proxemic_detector_pkg-0.0.0-py3.8.egg-info' (and everything under it)
+[0.995s] Copying ../../build/proxemic_detector_pkg/proxemic_detector_pkg.egg-info to /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/proxemic_detector_pkg-0.0.0-py3.8.egg-info
+[0.995s] running install_scripts
+[1.007s] Installing turtlebot_proxemic_detector_node script to /home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/proxemic_detector_pkg
+[1.007s] writing list of installed files to '/home/student/turtlebot4_ws/build/proxemic_detector_pkg/install.log'
+[1.031s] Invoked command in '/home/student/turtlebot4_ws/src/proxemic_detector_pkg' returned '0': PYTHONPATH=/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/proxemic_detector_pkg build --build-base /home/student/turtlebot4_ws/build/proxemic_detector_pkg/build install --prefix /home/student/turtlebot4_ws/install/proxemic_detector_pkg --record /home/student/turtlebot4_ws/build/proxemic_detector_pkg/install.log --single-version-externally-managed

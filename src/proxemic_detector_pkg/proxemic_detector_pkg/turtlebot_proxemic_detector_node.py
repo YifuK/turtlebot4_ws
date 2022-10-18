@@ -1,4 +1,5 @@
 # Import the necessary libraries
+from matplotlib.pyplot import box
 import rclpy                                    # Python library for ROS 2
 from rclpy.node import Node                     # Handles the creation of nodes
 from sensor_msgs.msg import Image               # Image is the message type
@@ -88,8 +89,11 @@ class ProxemicDetection(Node):
         -------
         None
         """
+        print(self.curr_state)
+        if self.curr_state == self.state4:
+            x = 1
         self.move_cmd.linear.x = float(x) # back or forward
-
+        print(x, 'speed')
         # Set movement parameters
         angular_speed = self.robot_speed*2*PI/360
         relative_angle = z*2*PI/360
@@ -131,17 +135,17 @@ class ProxemicDetection(Node):
         elif(self.curr_state == self.state2):
             selected_bbox, distance_to_object = self.detection_object_distance()
             # if the obj is not found, then rotate, else move to state3
-            if distance_to_object <= 0:
-                self.move_robot(0, 0.5, True)
+            if distance_to_object <= 0 or distance_to_object > 2000:
+                self.move_robot(0, 2, True)
             else:
                 self.next_state = self.state3
+
         elif(self.curr_state == self.state3):
-            
             if self.proxemic_ranges['public_depth_threshold_min'] < distance_to_object <= self.proxemic_ranges['public_depth_threshold_max']:
-                print('moveeeee')
+                print('going to state 4')
                 self.next_state = self.state4
             else:
-                self.move_robot(3, 0, True)
+                self.move_robot(x=1, z=0, clockwise=False)
         elif(self.curr_state == self.state4):
             # Do something
             # Condition to next state
@@ -194,7 +198,6 @@ class ProxemicDetection(Node):
         # Convert ROS Image message to OpenCV image
         try:
             self.depth_image = self.depth_bridge.imgmsg_to_cv2(msg)
-                            
             # Display image
             if(self.DISPLAY and self.depth_image is not None):
                 cv2.imshow("Depth Image", self.depth_image)
@@ -345,19 +348,28 @@ class ProxemicDetection(Node):
             mean depth distance to object
         """
         # Initialize variabes
+        resized_depth = cv2.resize(self.depth_image, (self.rgb_image.shape[0], self.rgb_image.shape[1]))
         selected_bbox=[]
-        distance_to_object=0
+        distance_to_object=1e9
         bbox_img_patch_mean = []
         temp_bboxes = []
+        colors = [self.color]
         # detecting all three colors
-        for color in ['red', 'blue', 'green']:
-            if color in self.bboxes.keys():
-                for bbox in self.bboxes[color]:
-                    img_patch = self.extract_image_patch(self.depth_image, bbox, (self.rgb_image.shape[0], self.rgb_image.shape[1]))
-                    # if img_patch.any():
-                    img_patch_mean = np.mean(img_patch)
-                    bbox_img_patch_mean.append(img_patch_mean)
-                    temp_bboxes.append(bbox)
+        if self.color is None:
+            colors = ['red', 'blue', 'green']
+        for color in colors:
+            color_box = self.bboxes[color]
+            print(color)
+            for bbox in color_box:
+                img_patch = self.extract_image_patch(resized_depth, bbox)
+                # if img_patch.any():
+
+                img_patch_mean = np.mean(img_patch)
+                print(img_patch_mean)
+                if img_patch_mean < distance_to_object:
+                    distance_to_object = img_patch_mean
+                    selected_bbox = box
+
         if bbox_img_patch_mean:
             distance_to_object = np.min(bbox_img_patch_mean)
             box_idx = np.argmin(bbox_img_patch_mean)
@@ -365,12 +377,13 @@ class ProxemicDetection(Node):
             if self.selected_zone == 'intimate':
                 if self.proxemic_ranges['intimate_depth_threshold_min'] < distance_to_object <= self.proxemic_ranges['intimate_depth_threshold_max']:
                     self.close_object = 'intimate'
-                    selected_bbox = temp_bboxes[box_idx]
+                    # selected_bbox = temp_bboxes[box_idx]
 
+      
             else:
                 if self.proxemic_ranges['public_depth_threshold_min'] < distance_to_object <= self.proxemic_ranges['public_depth_threshold_max']:
                     self.close_object = 'public'
-                    selected_bbox = temp_bboxes[box_idx]
+                    # selected_bbox = temp_bboxes[box_idx]
 
             
         if self.DISPLAY:

@@ -1,0 +1,5 @@
+  File "/home/student/turtlebot4_ws/install/proxemic_detector_pkg/lib/python3.8/site-packages/proxemic_detector_pkg/turtlebot_proxemic_detector_node.py", line 92
+    if self.curr_state =
+                       ^
+SyntaxError: invalid syntax
+
