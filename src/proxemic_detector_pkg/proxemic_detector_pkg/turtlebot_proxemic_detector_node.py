@@ -150,9 +150,9 @@ class ProxemicDetection(Node):
             # Do something
             # Condition to next state
             self.move_robot(0, 0)
-            if self.close_object == 'intimate':
+            if self.selected_zone == 'intimate':
                 self.robot_talker('intimate zone')
-            if self.close_object == 'public':
+            if self.selected_zone == 'public':
                 self.robot_talker('public zone')
             self.next_state = None
         
